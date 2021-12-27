@@ -1,18 +1,34 @@
 @import "null.scss";
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Montserrat:wght@300;400&family=Roboto&display=swap');
-@font-face { font-family: 'HelveticaNeueCyr-Roman';  src: local('HelveticaNeueCyr-Roman'), url('https://nomail.com.ua/files/woff/cd2355028bca504c63a432c086eceb52.woff') format('woff'); }
-@font-face { font-family: 'HelveticaNeueCyr-Light';  src: local('HelveticaNeueCyr-Light'), url('https://nomail.com.ua/files/woff/2127aa6d0680b144a3bd8be9debeba09.woff') format('woff'); }
-@font-face { font-family: 'HelveticaNeueCyr-Medium';  src: local('HelveticaNeueCyr-Medium'), url('https://nomail.com.ua/files/woff/c88edbac48d6408ef042ad663b7d9498.woff') format('woff'); }
 
-button, input, a {
+@font-face {
+	font-family: 'HelveticaNeueCyr-Roman';
+	src: local('HelveticaNeueCyr-Roman'), url('https://nomail.com.ua/files/woff/cd2355028bca504c63a432c086eceb52.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'HelveticaNeueCyr-Light';
+	src: local('HelveticaNeueCyr-Light'), url('https://nomail.com.ua/files/woff/2127aa6d0680b144a3bd8be9debeba09.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'HelveticaNeueCyr-Medium';
+	src: local('HelveticaNeueCyr-Medium'), url('https://nomail.com.ua/files/woff/c88edbac48d6408ef042ad663b7d9498.woff') format('woff');
+}
+
+button,
+input,
+a {
 	background: none;
 	color: #111;
 }
+
 .wrapper {
 	display: grid;
 	height: 100%;
 	grid-template-rows: auto 1fr auto;
 }
+
 .header {
 	grid-row: 1/2;
 	margin: 0 auto;
@@ -20,9 +36,13 @@ button, input, a {
 	&__menu {
 		display: flex;
 	}
+
 	&__menu-left {}
+
 	&__menu-left-links {}
+
 	&__menu-left-link {}
+
 	&__menu-logo {
 		display: flex;
 		justify-content: center;
@@ -39,13 +59,18 @@ button, input, a {
 			color: #fefefe;
 		}
 	}
+
 	&__menu-right {}
+
 	&__menu-right-links {}
+
 	&__menu-right-link {}
 }
+
 .header-links {
 	display: flex;
 }
+
 .header-link {
 	font-family: Roboto;
 	font-size: 13px;
@@ -53,11 +78,12 @@ button, input, a {
 	letter-spacing: 0.04em;
 	color: #989696;
 	margin: 22px 20px 22px 20px;
+
 	&:hover {
 		color: #111;
 		cursor: pointer;
 		font-weight: 700;
-		
+
 	}
 }
 
@@ -65,21 +91,25 @@ button, input, a {
 	grid-row: 2/3;
 	margin: 0 auto;
 }
+
 .block1 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 200px 0 0 0;
+	padding: 200px 0 110px 0;
 
 	&__head {
 		margin: 0 0 43px 0;
+		text-align: center;
 	}
+
 	&__head-title {
 		font-family: 'HelveticaNeueCyr-Light';
 		font-size: 44px;
 		letter-spacing: 0.02em;
 		color: #1d1e1f;
 	}
+
 	&__head-subtitle {
 		font-family: Merriweather;
 		font-size: 16px;
@@ -88,6 +118,7 @@ button, input, a {
 		letter-spacing: 0.03em;
 		color: #898888;
 	}
+
 	&__head-readmore {
 		width: 188px;
 		height: 57px;
@@ -96,12 +127,14 @@ button, input, a {
 		justify-content: center;
 		align-items: center;
 		transition: 1s;
+		margin: 0 0 306px 0;
 
-		&:hover{
+		&:hover {
 			transition: 0.5s;
 			box-shadow: 0px 0px 10px #f1f1f1;
 		}
 	}
+
 	&__head-readmore-button {
 		font-family: Montserrat;
 		font-size: 13px;
@@ -110,13 +143,192 @@ button, input, a {
 		letter-spacing: 0.04em;
 		color: #000000;
 	}
-	&__items-dots {}
+
+	&__items-dots {
+		width: 10px;
+		height: 10px;
+		opacity: 0.32;
+		border-radius: 50%;
+		background-color: #d0d0d0;
+		position: relative;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: -20px;
+			left: 0;
+			width: 10px;
+			height: 10px;
+			opacity: 0.65;
+			border-radius: 50%;
+			background-color: #d0d0d0;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 20px;
+			left: 0;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background-color: #d0d0d0;
+		}
+	}
 }
+
+@mixin left-line {
+	align-items: flex-end;
+	margin: 0 50px 90px 0;
+	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 5px;
+		right: -62px;
+		width: 24px;
+		height: 24px;
+		background: #111;
+		border-radius: 50%;
+		border: 5px solid #ffffff;
+	}
+}
+@mixin right-line {
+	align-items: flex-start;
+	margin: 0 0 70px 50px;
+	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 5px;
+		left: -62px;
+		width: 24px;
+		height: 24px;
+		background: #111;
+		border-radius: 50%;
+		border: 5px solid #ffffff;
+	}
+}
+
+.block2 {
+	background-color: #1d1d1d;
+	color: #fff;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: auto auto;
+	overflow: hidden;
+	padding: 150px 0 0 0;
+
+	&__items {
+		grid-column: 2/3;
+		display: grid;
+		margin: 0 0 200px 0;
+	}
+	
+
+	&__item {
+		max-width: 440px;
+		display: flex;
+		flex-direction: column;
+		z-index: 3;
+
+		&:nth-child(1) {
+			grid-row: 1/2;
+			grid-column: 1/2;
+			@include left-line;
+		}
+
+		&:nth-child(2) {
+			grid-row: 2/3;
+			grid-column: 2/3;
+			@include right-line;
+		}
+
+		&:nth-child(3) {
+			grid-row: 3/4;
+			grid-column: 1/2;
+			@include left-line;
+			&:after {
+				right: -72px;
+				width: 44px;
+				height: 44px;
+			}
+		}
+
+		&:nth-child(4) {
+			grid-row: 4/5;
+			grid-column: 2/3;
+			@include right-line;
+		}
+	}
+
+	&__item-title {
+		font-family: 'HelveticaNeueCyr-Roman';
+		font-size: 48px;
+		font-weight: 400;
+		letter-spacing: 0.02em;
+		color: #fefefe;
+		margin: 0 0 20px 0;
+	}
+
+	&__item-text {
+		font-family: Montserrat;
+		font-size: 15px;
+		line-height: 22px;
+		font-weight: 300;
+		letter-spacing: 0.02em;
+		color: #b7b7b7;
+	}
+
+	&__item-circle {}
+
+	&__line {
+		position: relative;
+		z-index: 2;
+		grid-column: 1/4;
+		transform: translate(0%, 5px);
+
+		&>img {
+			max-width: 100%;
+			height: auto;
+			object-fit: cover;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			z-index: 1;
+			bottom: 0;
+			left: 50%;
+			width: 5px;
+			height: 2000px;
+			background: #fff;
+			transform: rotate(0deg) translate(-50%, 0%);
+
+		}
+	}
+}
+.block3 {
+	&__head {}
+	&__title {}
+	&__subtitle {}
+	&__items {
+		display: flex;
+	}
+	&__item {}
+	&__item-photo {}
+	&__item-name {}
+	&__item-job {}
+	&__item-socials {
+		display: flex;
+	}
+	&__item-social {}
+}
+
 
 .footer {
 	grid-row: 3/4;
 	margin: 0 auto;
 }
-
-
-
