@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Montserrat:wght@300;400&family=Roboto&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+  list-style-type: none;
+}
+
+ul, li {
+  list-style: none;
+  list-style-type: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "HelveticaNeueCyr-Roman";
+  src: local("HelveticaNeueCyr-Roman"), url("https://nomail.com.ua/files/woff/cd2355028bca504c63a432c086eceb52.woff") format("woff");
+}
+@font-face {
+  font-family: "HelveticaNeueCyr-Light";
+  src: local("HelveticaNeueCyr-Light"), url("https://nomail.com.ua/files/woff/2127aa6d0680b144a3bd8be9debeba09.woff") format("woff");
+}
+@font-face {
+  font-family: "HelveticaNeueCyr-Medium";
+  src: local("HelveticaNeueCyr-Medium"), url("https://nomail.com.ua/files/woff/c88edbac48d6408ef042ad663b7d9498.woff") format("woff");
+}
+button, input, a {
+  background: none;
+  color: #111;
+}
+
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  height: 100%;
+  -ms-grid-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr auto;
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  margin: 0 auto;
+}
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header__menu-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 15px;
+  background: #111;
+  margin: 0px 20px;
+}
+.header__menu-logo > a {
+  font-family: "HelveticaNeueCyr-Light";
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #fefefe;
+}
+.header-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-link {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: #989696;
+  margin: 22px 20px 22px 20px;
+}
+.header-link:hover {
+  color: #111;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.body {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  margin: 0 auto;
+}
+
+.block1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 200px 0 0 0;
+}
+.block1__head {
+  margin: 0 0 43px 0;
+}
+.block1__head-title {
+  font-family: "HelveticaNeueCyr-Light";
+  font-size: 44px;
+  letter-spacing: 0.02em;
+  color: #1d1e1f;
+}
+.block1__head-subtitle {
+  font-family: Merriweather;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.03em;
+  color: #898888;
+}
+.block1__head-readmore {
+  width: 188px;
+  height: 57px;
+  border-top: 1px solid #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.block1__head-readmore:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-shadow: 0px 0px 10px #f1f1f1;
+          box-shadow: 0px 0px 10px #f1f1f1;
+}
+.block1__head-readmore-button {
+  font-family: Montserrat;
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: #000000;
+}
+.footer {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  margin: 0 auto;
+}
